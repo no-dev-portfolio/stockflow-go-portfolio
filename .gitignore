@@ -1,0 +1,10 @@
+.env
+*.out
+*.log
+stockflow
+web/node_modules/
+deploy/aws/.terraform/
+*.tfstate*
+*.tfplan
+terraform.tfvars
+.DS_Store

@@ -1,0 +1,1 @@
+Read AGENTS.md and docs/DESIGN.md first. Counter-review instructions are in docs/COUNTER_REVIEW.md. Do not treat documentation claims as test evidence. Do not run Terraform apply or publish without a user's explicit request.

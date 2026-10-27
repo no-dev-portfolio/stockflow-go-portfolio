@@ -1,0 +1,10 @@
+.git
+.env
+*.out
+web/node_modules
+web/dist
+docs/images
+deploy/aws/.terraform
+*.tfstate*
+work
+outputs

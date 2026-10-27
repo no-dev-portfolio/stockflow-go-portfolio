@@ -1,0 +1,50 @@
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_DB: stockflow
+      POSTGRES_USER: stockflow
+      POSTGRES_PASSWORD: local-demo-only
+    volumes:
+      - stockflow_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stockflow -d stockflow"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  app:
+    build:
+      context: .
+      target: demo
+    environment:
+      DEMO_MODE: "true"
+      DATABASE_URL: postgres://stockflow:local-demo-only@db:5432/stockflow?sslmode=disable
+      LISTEN_ADDR: 0.0.0.0:8080
+      DEMO_DELIVERY_FAILURES: "${DEMO_DELIVERY_FAILURES:-0}"
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    stop_grace_period: 20s
+    healthcheck:
+      test: ["CMD", "/app/stockflow", "health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  tests:
+    profiles: [test]
+    build:
+      context: .
+      target: verify
+    environment:
+      TEST_DATABASE_URL: postgres://stockflow:local-demo-only@db:5432/stockflow?sslmode=disable
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  stockflow_db:
