@@ -1,0 +1,19 @@
+{
+  "/readyz": {
+    "status": 200,
+    "body": {
+      "status": "ready"
+    }
+  },
+  "/openapi.json": {
+    "status": 200,
+    "body": {
+      "version": "1.0.1"
+    }
+  },
+  "health_command": {
+    "listen_addr": "0.0.0.0:9090",
+    "command": "/app/stockflow health",
+    "exit_code": 0
+  }
+}

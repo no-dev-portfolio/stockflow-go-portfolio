@@ -1,0 +1,196 @@
++ cd /review
++ go version
+go version go1.27.3 linux/arm64
++ sh scripts/check.sh
+all modules verified
+ok  	example.com/stockflow/cmd/stockflow	1.021s	coverage: 27.2% of statements
+ok  	example.com/stockflow/internal/domain	1.014s	coverage: 87.9% of statements
+ok  	example.com/stockflow/internal/httpapi	1.940s	coverage: 87.0% of statements
+ok  	example.com/stockflow/internal/store	2.975s	coverage: 77.6% of statements
+	example.com/stockflow/internal/testutil		coverage: 0.0% of statements
+ok  	example.com/stockflow/internal/worker	1.163s	coverage: 86.4% of statements
+?   	example.com/stockflow/migrations	[no test files]
+?   	example.com/stockflow/web	[no test files]
+example.com/stockflow/cmd/stockflow/main.go:19:		main		0.0%
+example.com/stockflow/cmd/stockflow/main.go:33:		run		0.0%
+example.com/stockflow/cmd/stockflow/main.go:101:	healthURL	100.0%
+example.com/stockflow/cmd/stockflow/main.go:120:	checkHealth	90.9%
+example.com/stockflow/internal/domain/model.go:21:	Error		0.0%
+example.com/stockflow/internal/domain/model.go:31:	Invalid		100.0%
+example.com/stockflow/internal/domain/model.go:32:	AsFault		75.0%
+example.com/stockflow/internal/domain/model.go:43:	ID		75.0%
+example.com/stockflow/internal/domain/model.go:57:	CanWrite	100.0%
+example.com/stockflow/internal/domain/model.go:69:	Normalize	100.0%
+example.com/stockflow/internal/domain/model.go:143:	CheckVersion	66.7%
+example.com/stockflow/internal/httpapi/api.go:31:	DemoCredentials	100.0%
+example.com/stockflow/internal/httpapi/api.go:48:	Handler		84.0%
+example.com/stockflow/internal/httpapi/api.go:208:	actor		100.0%
+example.com/stockflow/internal/httpapi/api.go:209:	auth		100.0%
+example.com/stockflow/internal/httpapi/api.go:229:	forbidden	100.0%
+example.com/stockflow/internal/httpapi/api.go:232:	respond		100.0%
+example.com/stockflow/internal/httpapi/api.go:239:	fail		66.7%
+example.com/stockflow/internal/httpapi/api.go:253:	decode		100.0%
+example.com/stockflow/internal/httpapi/api.go:270:	pagination	92.3%
+example.com/stockflow/internal/store/read.go:8:		Stocks		81.8%
+example.com/stockflow/internal/store/read.go:24:	Reservations	78.9%
+example.com/stockflow/internal/store/read.go:76:	Events		81.8%
+example.com/stockflow/internal/store/read.go:92:	Audits		84.6%
+example.com/stockflow/internal/store/read.go:111:	Summary		100.0%
+example.com/stockflow/internal/store/store.go:19:	Open		71.4%
+example.com/stockflow/internal/store/store.go:38:	Migrate		68.2%
+example.com/stockflow/internal/store/store.go:70:	Seed		76.9%
+example.com/stockflow/internal/store/store.go:107:	writeEvent	80.0%
+example.com/stockflow/internal/store/store.go:115:	getReservation	82.4%
+example.com/stockflow/internal/store/store.go:142:	Get		100.0%
+example.com/stockflow/internal/store/store.go:145:	Create		78.7%
+example.com/stockflow/internal/store/store.go:230:	Transition	74.6%
+example.com/stockflow/internal/store/store.go:320:	releaseStock	73.9%
+example.com/stockflow/internal/store/store.go:353:	ExpireOne	70.6%
+example.com/stockflow/internal/store/store.go:380:	DeliverOne	87.0%
+example.com/stockflow/internal/store/store.go:413:	Retry		73.3%
+example.com/stockflow/internal/store/store.go:438:	rollback	100.0%
+example.com/stockflow/internal/testutil/db.go:12:	DB		0.0%
+example.com/stockflow/internal/testutil/db.go:51:	Manager		0.0%
+example.com/stockflow/internal/testutil/db.go:54:	Request		0.0%
+example.com/stockflow/internal/worker/worker.go:19:	Run		86.4%
+total:							(statements)	71.7%
++ go test -race -v -count=5 -run TestHealthURL|TestCheckHealth|TestExpiryOnCommand|TestExpiryIsRecheckedAfterStockLockWait|TestRejectJSONLikeContentType ./cmd/stockflow ./internal/store ./internal/httpapi
+=== RUN   TestHealthURL
+=== RUN   TestHealthURL/#00
+=== RUN   TestHealthURL/:9090
+=== RUN   TestHealthURL/0.0.0.0:9090
+=== RUN   TestHealthURL/127.0.0.1:9091
+=== RUN   TestHealthURL/[::]:9090
+=== RUN   TestHealthURL/[::1]:9091
+--- PASS: TestHealthURL (0.00s)
+    --- PASS: TestHealthURL/#00 (0.00s)
+    --- PASS: TestHealthURL/:9090 (0.00s)
+    --- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)
+    --- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)
+    --- PASS: TestHealthURL/[::]:9090 (0.00s)
+    --- PASS: TestHealthURL/[::1]:9091 (0.00s)
+=== RUN   TestCheckHealth
+=== RUN   TestCheckHealth/OK
+=== RUN   TestCheckHealth/Service_Unavailable
+--- PASS: TestCheckHealth (0.00s)
+    --- PASS: TestCheckHealth/OK (0.00s)
+    --- PASS: TestCheckHealth/Service_Unavailable (0.00s)
+=== RUN   TestHealthURL
+=== RUN   TestHealthURL/#00
+=== RUN   TestHealthURL/:9090
+=== RUN   TestHealthURL/0.0.0.0:9090
+=== RUN   TestHealthURL/127.0.0.1:9091
+=== RUN   TestHealthURL/[::]:9090
+=== RUN   TestHealthURL/[::1]:9091
+--- PASS: TestHealthURL (0.00s)
+    --- PASS: TestHealthURL/#00 (0.00s)
+    --- PASS: TestHealthURL/:9090 (0.00s)
+    --- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)
+    --- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)
+    --- PASS: TestHealthURL/[::]:9090 (0.00s)
+    --- PASS: TestHealthURL/[::1]:9091 (0.00s)
+=== RUN   TestCheckHealth
+=== RUN   TestCheckHealth/OK
+=== RUN   TestCheckHealth/Service_Unavailable
+--- PASS: TestCheckHealth (0.00s)
+    --- PASS: TestCheckHealth/OK (0.00s)
+    --- PASS: TestCheckHealth/Service_Unavailable (0.00s)
+=== RUN   TestHealthURL
+=== RUN   TestHealthURL/#00
+=== RUN   TestHealthURL/:9090
+=== RUN   TestHealthURL/0.0.0.0:9090
+=== RUN   TestHealthURL/127.0.0.1:9091
+=== RUN   TestHealthURL/[::]:9090
+=== RUN   TestHealthURL/[::1]:9091
+--- PASS: TestHealthURL (0.00s)
+    --- PASS: TestHealthURL/#00 (0.00s)
+    --- PASS: TestHealthURL/:9090 (0.00s)
+    --- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)
+    --- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)
+    --- PASS: TestHealthURL/[::]:9090 (0.00s)
+    --- PASS: TestHealthURL/[::1]:9091 (0.00s)
+=== RUN   TestCheckHealth
+=== RUN   TestCheckHealth/OK
+=== RUN   TestCheckHealth/Service_Unavailable
+--- PASS: TestCheckHealth (0.00s)
+    --- PASS: TestCheckHealth/OK (0.00s)
+    --- PASS: TestCheckHealth/Service_Unavailable (0.00s)
+=== RUN   TestHealthURL
+=== RUN   TestHealthURL/:9090
+=== RUN   TestHealthURL/0.0.0.0:9090
+=== RUN   TestHealthURL/127.0.0.1:9091
+=== RUN   TestHealthURL/[::]:9090
+=== RUN   TestHealthURL/[::1]:9091
+=== RUN   TestHealthURL/#00
+--- PASS: TestHealthURL (0.00s)
+    --- PASS: TestHealthURL/:9090 (0.00s)
+    --- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)
+    --- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)
+    --- PASS: TestHealthURL/[::]:9090 (0.00s)
+    --- PASS: TestHealthURL/[::1]:9091 (0.00s)
+    --- PASS: TestHealthURL/#00 (0.00s)
+=== RUN   TestCheckHealth
+=== RUN   TestCheckHealth/OK
+=== RUN   TestCheckHealth/Service_Unavailable
+--- PASS: TestCheckHealth (0.00s)
+    --- PASS: TestCheckHealth/OK (0.00s)
+    --- PASS: TestCheckHealth/Service_Unavailable (0.00s)
+=== RUN   TestHealthURL
+=== RUN   TestHealthURL/[::]:9090
+=== RUN   TestHealthURL/[::1]:9091
+=== RUN   TestHealthURL/#00
+=== RUN   TestHealthURL/:9090
+=== RUN   TestHealthURL/0.0.0.0:9090
+=== RUN   TestHealthURL/127.0.0.1:9091
+--- PASS: TestHealthURL (0.00s)
+    --- PASS: TestHealthURL/[::]:9090 (0.00s)
+    --- PASS: TestHealthURL/[::1]:9091 (0.00s)
+    --- PASS: TestHealthURL/#00 (0.00s)
+    --- PASS: TestHealthURL/:9090 (0.00s)
+    --- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)
+    --- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)
+=== RUN   TestCheckHealth
+=== RUN   TestCheckHealth/OK
+=== RUN   TestCheckHealth/Service_Unavailable
+--- PASS: TestCheckHealth (0.00s)
+    --- PASS: TestCheckHealth/OK (0.00s)
+    --- PASS: TestCheckHealth/Service_Unavailable (0.00s)
+PASS
+ok  	example.com/stockflow/cmd/stockflow	1.039s
+=== RUN   TestExpiryOnCommand
+--- PASS: TestExpiryOnCommand (0.06s)
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.49s)
+=== RUN   TestExpiryOnCommand
+--- PASS: TestExpiryOnCommand (0.07s)
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.48s)
+=== RUN   TestExpiryOnCommand
+--- PASS: TestExpiryOnCommand (0.06s)
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.48s)
+=== RUN   TestExpiryOnCommand
+--- PASS: TestExpiryOnCommand (0.07s)
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.50s)
+=== RUN   TestExpiryOnCommand
+--- PASS: TestExpiryOnCommand (0.06s)
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.48s)
+PASS
+ok  	example.com/stockflow/internal/store	3.783s
+=== RUN   TestRejectJSONLikeContentType
+--- PASS: TestRejectJSONLikeContentType (0.05s)
+=== RUN   TestRejectJSONLikeContentType
+--- PASS: TestRejectJSONLikeContentType (0.06s)
+=== RUN   TestRejectJSONLikeContentType
+--- PASS: TestRejectJSONLikeContentType (0.05s)
+=== RUN   TestRejectJSONLikeContentType
+--- PASS: TestRejectJSONLikeContentType (0.05s)
+=== RUN   TestRejectJSONLikeContentType
+--- PASS: TestRejectJSONLikeContentType (0.05s)
+PASS
+ok  	example.com/stockflow/internal/httpapi	1.300s
++ go test -race -count=1 -json ./...
+CHECKS_PASSED
++ echo CHECKS_PASSED

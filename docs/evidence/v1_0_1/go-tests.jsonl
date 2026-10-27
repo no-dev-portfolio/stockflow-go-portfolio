@@ -1,0 +1,293 @@
+{"Time":"2026-10-27T00:17:33.211544255Z","Action":"start","Package":"example.com/stockflow/cmd/stockflow"}
+{"Time":"2026-10-27T00:17:33.211920089Z","Action":"start","Package":"example.com/stockflow/internal/domain"}
+{"Time":"2026-10-27T00:17:33.217974505Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize"}
+{"Time":"2026-10-27T00:17:33.220854505Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize","Output":"=== RUN   TestNormalize\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.22180663Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/valid"}
+{"Time":"2026-10-27T00:17:33.221912589Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/valid","Output":"=== RUN   TestNormalize/valid\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.222009797Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/valid","Output":"--- PASS: TestNormalize/valid (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.223538672Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/valid","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.227814464Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/empty_reference"}
+{"Time":"2026-10-27T00:17:33.228698589Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/empty_reference","Output":"=== RUN   TestNormalize/empty_reference\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.228857422Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/empty_reference","Output":"--- PASS: TestNormalize/empty_reference (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.229701589Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/empty_reference","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.228496172Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL"}
+{"Time":"2026-10-27T00:17:33.229934255Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL","Output":"=== RUN   TestHealthURL\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230000255Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/0.0.0.0:9090"}
+{"Time":"2026-10-27T00:17:33.230037047Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/0.0.0.0:9090","Output":"=== RUN   TestHealthURL/0.0.0.0:9090\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230105089Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/0.0.0.0:9090","Output":"--- PASS: TestHealthURL/0.0.0.0:9090 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230163755Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/0.0.0.0:9090","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.230220422Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/127.0.0.1:9091"}
+{"Time":"2026-10-27T00:17:33.230273255Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/127.0.0.1:9091","Output":"=== RUN   TestHealthURL/127.0.0.1:9091\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230328464Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/127.0.0.1:9091","Output":"--- PASS: TestHealthURL/127.0.0.1:9091 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230377672Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/127.0.0.1:9091","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.230425672Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::]:9090"}
+{"Time":"2026-10-27T00:17:33.230470589Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::]:9090","Output":"=== RUN   TestHealthURL/[::]:9090\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230541714Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::]:9090","Output":"--- PASS: TestHealthURL/[::]:9090 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23058638Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::]:9090","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.230631255Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::1]:9091"}
+{"Time":"2026-10-27T00:17:33.230674672Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::1]:9091","Output":"=== RUN   TestHealthURL/[::1]:9091\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230760255Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::1]:9091","Output":"--- PASS: TestHealthURL/[::1]:9091 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230856214Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/[::1]:9091","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.230922255Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/#00"}
+{"Time":"2026-10-27T00:17:33.229915255Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_reference"}
+{"Time":"2026-10-27T00:17:33.231049505Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_reference","Output":"=== RUN   TestNormalize/long_reference\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231112714Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_reference","Output":"--- PASS: TestNormalize/long_reference (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231171464Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_reference","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.231228672Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/C1_character"}
+{"Time":"2026-10-27T00:17:33.231287714Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/C1_character","Output":"=== RUN   TestNormalize/C1_character\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231356339Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/C1_character","Output":"--- PASS: TestNormalize/C1_character (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231419297Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/C1_character","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.231477714Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/newline"}
+{"Time":"2026-10-27T00:17:33.231536505Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/newline","Output":"=== RUN   TestNormalize/newline\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231594297Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/newline","Output":"--- PASS: TestNormalize/newline (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231656422Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/newline","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.23170663Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/no_items"}
+{"Time":"2026-10-27T00:17:33.231753339Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/no_items","Output":"=== RUN   TestNormalize/no_items\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23184713Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/no_items","Output":"--- PASS: TestNormalize/no_items (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.231907839Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/no_items","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.232006089Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/negative"}
+{"Time":"2026-10-27T00:17:33.232092339Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/negative","Output":"=== RUN   TestNormalize/negative\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.230995505Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/#00","Output":"=== RUN   TestHealthURL/#00\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23224888Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/#00","Output":"--- PASS: TestHealthURL/#00 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232311547Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/#00","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.232378922Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/:9090"}
+{"Time":"2026-10-27T00:17:33.232438714Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/:9090","Output":"=== RUN   TestHealthURL/:9090\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232490214Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/:9090","Output":"--- PASS: TestHealthURL/:9090 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232524255Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL/:9090","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.232557255Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL","Output":"--- PASS: TestHealthURL (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232604005Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestHealthURL","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.232660047Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth"}
+{"Time":"2026-10-27T00:17:33.232693714Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth","Output":"=== RUN   TestCheckHealth\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232745297Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/OK"}
+{"Time":"2026-10-27T00:17:33.23280488Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/OK","Output":"=== RUN   TestCheckHealth/OK\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232882672Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/OK","Output":"--- PASS: TestCheckHealth/OK (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232993839Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/OK","Elapsed":0.01}
+{"Time":"2026-10-27T00:17:33.233054755Z","Action":"run","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/Service_Unavailable"}
+{"Time":"2026-10-27T00:17:33.233094339Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/Service_Unavailable","Output":"=== RUN   TestCheckHealth/Service_Unavailable\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233130505Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/Service_Unavailable","Output":"--- PASS: TestCheckHealth/Service_Unavailable (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233161964Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth/Service_Unavailable","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233196547Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth","Output":"--- PASS: TestCheckHealth (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.232191672Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/negative","Output":"--- PASS: TestNormalize/negative (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233279172Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/negative","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233314797Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/quantity_limit"}
+{"Time":"2026-10-27T00:17:33.233353089Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/quantity_limit","Output":"=== RUN   TestNormalize/quantity_limit\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233382339Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/quantity_limit","Output":"--- PASS: TestNormalize/quantity_limit (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233412172Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/quantity_limit","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233451255Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/SKU_injection"}
+{"Time":"2026-10-27T00:17:33.233503255Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/SKU_injection","Output":"=== RUN   TestNormalize/SKU_injection\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23354488Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/SKU_injection","Output":"--- PASS: TestNormalize/SKU_injection (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233572797Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/SKU_injection","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233600922Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/duplicates"}
+{"Time":"2026-10-27T00:17:33.23362788Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/duplicates","Output":"=== RUN   TestNormalize/duplicates\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233661464Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/duplicates","Output":"--- PASS: TestNormalize/duplicates (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233699089Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/duplicates","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233736839Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/short_ttl"}
+{"Time":"2026-10-27T00:17:33.233774547Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/short_ttl","Output":"=== RUN   TestNormalize/short_ttl\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23380363Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/short_ttl","Output":"--- PASS: TestNormalize/short_ttl (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233861464Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/short_ttl","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.233892297Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_ttl"}
+{"Time":"2026-10-27T00:17:33.233929172Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_ttl","Output":"=== RUN   TestNormalize/long_ttl\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.233966464Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_ttl","Output":"--- PASS: TestNormalize/long_ttl (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234005214Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize/long_ttl","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234037714Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize","Output":"--- PASS: TestNormalize (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234080839Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestNormalize","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234114672Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestCanonicalSortWithoutMutation"}
+{"Time":"2026-10-27T00:17:33.234147422Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestCanonicalSortWithoutMutation","Output":"=== RUN   TestCanonicalSortWithoutMutation\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234184964Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestCanonicalSortWithoutMutation","Output":"--- PASS: TestCanonicalSortWithoutMutation (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234214089Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestCanonicalSortWithoutMutation","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234248714Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestIDs"}
+{"Time":"2026-10-27T00:17:33.233250547Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Test":"TestCheckHealth","Elapsed":0.01}
+{"Time":"2026-10-27T00:17:33.234312964Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23429638Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestIDs","Output":"=== RUN   TestIDs\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234364422Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestIDs","Output":"--- PASS: TestIDs (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234393839Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestIDs","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234422797Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestPermissions"}
+{"Time":"2026-10-27T00:17:33.234448505Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestPermissions","Output":"=== RUN   TestPermissions\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23447688Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestPermissions","Output":"--- PASS: TestPermissions (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.23450138Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestPermissions","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234527214Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"TestFaults"}
+{"Time":"2026-10-27T00:17:33.234554797Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestFaults","Output":"=== RUN   TestFaults\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234583422Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"TestFaults","Output":"--- PASS: TestFaults (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234610922Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"TestFaults","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234638714Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize"}
+{"Time":"2026-10-27T00:17:33.234666755Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize","Output":"=== RUN   FuzzNormalize\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234693172Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#0"}
+{"Time":"2026-10-27T00:17:33.234718547Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#0","Output":"=== RUN   FuzzNormalize/seed#0\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234746547Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#0","Output":"--- PASS: FuzzNormalize/seed#0 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234771964Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#0","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234811422Z","Action":"run","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#1"}
+{"Time":"2026-10-27T00:17:33.234833505Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#1","Output":"=== RUN   FuzzNormalize/seed#1\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234855464Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#1","Output":"--- PASS: FuzzNormalize/seed#1 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234875755Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize/seed#1","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234900839Z","Action":"output","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize","Output":"--- PASS: FuzzNormalize (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.234925089Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Test":"FuzzNormalize","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.234950297Z","Action":"output","Package":"example.com/stockflow/internal/domain","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.254818339Z","Action":"start","Package":"example.com/stockflow/internal/httpapi"}
+{"Time":"2026-10-27T00:17:33.254939964Z","Action":"start","Package":"example.com/stockflow/internal/store"}
+{"Time":"2026-10-27T00:17:33.255028839Z","Action":"start","Package":"example.com/stockflow/internal/testutil"}
+{"Time":"2026-10-27T00:17:33.255084964Z","Action":"output","Package":"example.com/stockflow/internal/testutil","Output":"?   \texample.com/stockflow/internal/testutil\t[no test files]\n"}
+{"Time":"2026-10-27T00:17:33.255130589Z","Action":"skip","Package":"example.com/stockflow/internal/testutil","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.25510563Z","Action":"start","Package":"example.com/stockflow/internal/worker"}
+{"Time":"2026-10-27T00:17:33.255318422Z","Action":"start","Package":"example.com/stockflow/migrations"}
+{"Time":"2026-10-27T00:17:33.255424339Z","Action":"output","Package":"example.com/stockflow/migrations","Output":"?   \texample.com/stockflow/migrations\t[no test files]\n"}
+{"Time":"2026-10-27T00:17:33.255508797Z","Action":"skip","Package":"example.com/stockflow/migrations","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.255546255Z","Action":"start","Package":"example.com/stockflow/web"}
+{"Time":"2026-10-27T00:17:33.255659797Z","Action":"output","Package":"example.com/stockflow/web","Output":"?   \texample.com/stockflow/web\t[no test files]\n"}
+{"Time":"2026-10-27T00:17:33.255689464Z","Action":"skip","Package":"example.com/stockflow/web","Elapsed":0}
+{"Time":"2026-10-27T00:17:33.262020922Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestCreateReplayAndConflict"}
+{"Time":"2026-10-27T00:17:33.262148005Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCreateReplayAndConflict","Output":"=== RUN   TestCreateReplayAndConflict\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.26239938Z","Action":"run","Package":"example.com/stockflow/internal/worker","Test":"TestWorkersDrainAndStop"}
+{"Time":"2026-10-27T00:17:33.262494589Z","Action":"output","Package":"example.com/stockflow/internal/worker","Test":"TestWorkersDrainAndStop","Output":"=== RUN   TestWorkersDrainAndStop\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.266280839Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestAuthorization"}
+{"Time":"2026-10-27T00:17:33.266460297Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestAuthorization","Output":"=== RUN   TestAuthorization\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.309510922Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCreateReplayAndConflict","Output":"--- PASS: TestCreateReplayAndConflict (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.309679464Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestCreateReplayAndConflict","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.309772005Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestCanonicalReplay"}
+{"Time":"2026-10-27T00:17:33.309841755Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCanonicalReplay","Output":"=== RUN   TestCanonicalReplay\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.321987922Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestAuthorization","Output":"--- PASS: TestAuthorization (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.322112964Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestAuthorization","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.322224339Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestRoleEnforcement"}
+{"Time":"2026-10-27T00:17:33.322290297Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestRoleEnforcement","Output":"=== RUN   TestRoleEnforcement\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.345311464Z","Action":"output","Package":"example.com/stockflow/internal/worker","Test":"TestWorkersDrainAndStop","Output":"--- PASS: TestWorkersDrainAndStop (0.08s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.345420255Z","Action":"pass","Package":"example.com/stockflow/internal/worker","Test":"TestWorkersDrainAndStop","Elapsed":0.08}
+{"Time":"2026-10-27T00:17:33.34556863Z","Action":"output","Package":"example.com/stockflow/internal/worker","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.35988388Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCanonicalReplay","Output":"--- PASS: TestCanonicalReplay (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.360054505Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestCanonicalReplay","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.36045313Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestAllOrNothing"}
+{"Time":"2026-10-27T00:17:33.360600589Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestAllOrNothing","Output":"=== RUN   TestAllOrNothing\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.370684964Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestRoleEnforcement","Output":"--- PASS: TestRoleEnforcement (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.370846672Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestRoleEnforcement","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.370952672Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestCreateHTTPReplay"}
+{"Time":"2026-10-27T00:17:33.371021964Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestCreateHTTPReplay","Output":"=== RUN   TestCreateHTTPReplay\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.405721755Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestAllOrNothing","Output":"--- PASS: TestAllOrNothing (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.405888589Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestAllOrNothing","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.406061547Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestMissingSKUAndUnknownTenant"}
+{"Time":"2026-10-27T00:17:33.406161755Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestMissingSKUAndUnknownTenant","Output":"=== RUN   TestMissingSKUAndUnknownTenant\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.427748589Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestCreateHTTPReplay","Output":"--- PASS: TestCreateHTTPReplay (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.427898547Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestCreateHTTPReplay","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.428033422Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestStrictJSON"}
+{"Time":"2026-10-27T00:17:33.428132297Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestStrictJSON","Output":"=== RUN   TestStrictJSON\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.45836063Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestMissingSKUAndUnknownTenant","Output":"--- PASS: TestMissingSKUAndUnknownTenant (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.458640964Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestMissingSKUAndUnknownTenant","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.458704672Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay"}
+{"Time":"2026-10-27T00:17:33.458867714Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay","Output":"=== RUN   TestConfirmCancelAndReplay\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.458967505Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/confirmed"}
+{"Time":"2026-10-27T00:17:33.459089589Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/confirmed","Output":"=== RUN   TestConfirmCancelAndReplay/confirmed\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.483774464Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestStrictJSON","Output":"--- PASS: TestStrictJSON (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.483946631Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestStrictJSON","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.484163506Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestMediaTypeAndSize"}
+{"Time":"2026-10-27T00:17:33.484266381Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMediaTypeAndSize","Output":"=== RUN   TestMediaTypeAndSize\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.516242756Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/confirmed","Output":"--- PASS: TestConfirmCancelAndReplay/confirmed (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.517217506Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/confirmed","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.517302714Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/cancelled"}
+{"Time":"2026-10-27T00:17:33.517448589Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/cancelled","Output":"=== RUN   TestConfirmCancelAndReplay/cancelled\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.532257756Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMediaTypeAndSize","Output":"--- PASS: TestMediaTypeAndSize (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.532368922Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestMediaTypeAndSize","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.532520839Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestMissingIdempotencyKey"}
+{"Time":"2026-10-27T00:17:33.532640381Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMissingIdempotencyKey","Output":"=== RUN   TestMissingIdempotencyKey\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.573019589Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/cancelled","Output":"--- PASS: TestConfirmCancelAndReplay/cancelled (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.573322589Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay/cancelled","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.573487006Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay","Output":"--- PASS: TestConfirmCancelAndReplay (0.11s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.573608464Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestConfirmCancelAndReplay","Elapsed":0.11}
+{"Time":"2026-10-27T00:17:33.573770797Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestStaleVersion"}
+{"Time":"2026-10-27T00:17:33.573866881Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestStaleVersion","Output":"=== RUN   TestStaleVersion\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.586231131Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMissingIdempotencyKey","Output":"--- PASS: TestMissingIdempotencyKey (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.586389922Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestMissingIdempotencyKey","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.586690547Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestPaginationValidation"}
+{"Time":"2026-10-27T00:17:33.586804672Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestPaginationValidation","Output":"=== RUN   TestPaginationValidation\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.627595547Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestStaleVersion","Output":"--- PASS: TestStaleVersion (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.628068797Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestStaleVersion","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.628236172Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestExpiryOnCommand"}
+{"Time":"2026-10-27T00:17:33.628370172Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryOnCommand","Output":"=== RUN   TestExpiryOnCommand\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.641440631Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestPaginationValidation","Output":"--- PASS: TestPaginationValidation (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.641606006Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestPaginationValidation","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.641799922Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestTenantReadIsolationHTTP"}
+{"Time":"2026-10-27T00:17:33.641869339Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestTenantReadIsolationHTTP","Output":"=== RUN   TestTenantReadIsolationHTTP\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.685135047Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryOnCommand","Output":"--- PASS: TestExpiryOnCommand (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.685312589Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestExpiryOnCommand","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.685454297Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestExpiryWorker"}
+{"Time":"2026-10-27T00:17:33.685584631Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryWorker","Output":"=== RUN   TestExpiryWorker\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.699241339Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestTenantReadIsolationHTTP","Output":"--- PASS: TestTenantReadIsolationHTTP (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.699364006Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestTenantReadIsolationHTTP","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.699434381Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestTransitionHTTP"}
+{"Time":"2026-10-27T00:17:33.699544172Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestTransitionHTTP","Output":"=== RUN   TestTransitionHTTP\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.742359214Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryWorker","Output":"--- PASS: TestExpiryWorker (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.742890464Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestExpiryWorker","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.743118714Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestTenantAndRoleIsolation"}
+{"Time":"2026-10-27T00:17:33.743237714Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestTenantAndRoleIsolation","Output":"=== RUN   TestTenantAndRoleIsolation\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.758838506Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestTransitionHTTP","Output":"--- PASS: TestTransitionHTTP (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.759209464Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestTransitionHTTP","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.759652672Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestHealthStaticAndHeaders"}
+{"Time":"2026-10-27T00:17:33.759819131Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestHealthStaticAndHeaders","Output":"=== RUN   TestHealthStaticAndHeaders\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.780307756Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestTenantAndRoleIsolation","Output":"--- PASS: TestTenantAndRoleIsolation (0.04s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.780540339Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestTenantAndRoleIsolation","Elapsed":0.04}
+{"Time":"2026-10-27T00:17:33.780740756Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentNoOversell"}
+{"Time":"2026-10-27T00:17:33.780879381Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentNoOversell","Output":"=== RUN   TestConcurrentNoOversell\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.817085256Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestHealthStaticAndHeaders","Output":"--- PASS: TestHealthStaticAndHeaders (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.817849339Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestHealthStaticAndHeaders","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:33.817980589Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestMetricsAndNoTokenLogs"}
+{"Time":"2026-10-27T00:17:33.818096506Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMetricsAndNoTokenLogs","Output":"=== RUN   TestMetricsAndNoTokenLogs\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.891582714Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestMetricsAndNoTokenLogs","Output":"--- PASS: TestMetricsAndNoTokenLogs (0.07s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.892070256Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestMetricsAndNoTokenLogs","Elapsed":0.07}
+{"Time":"2026-10-27T00:17:33.892194464Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestUnknownRouteAndRetryID"}
+{"Time":"2026-10-27T00:17:33.892284672Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestUnknownRouteAndRetryID","Output":"=== RUN   TestUnknownRouteAndRetryID\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.902823714Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentNoOversell","Output":"--- PASS: TestConcurrentNoOversell (0.12s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.903790214Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentNoOversell","Elapsed":0.12}
+{"Time":"2026-10-27T00:17:33.903986506Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentSameKey"}
+{"Time":"2026-10-27T00:17:33.904087797Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentSameKey","Output":"=== RUN   TestConcurrentSameKey\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.940508714Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestUnknownRouteAndRetryID","Output":"--- PASS: TestUnknownRouteAndRetryID (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.940678756Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestUnknownRouteAndRetryID","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:33.940856297Z","Action":"run","Package":"example.com/stockflow/internal/httpapi","Test":"TestRejectJSONLikeContentType"}
+{"Time":"2026-10-27T00:17:33.940947589Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestRejectJSONLikeContentType","Output":"=== RUN   TestRejectJSONLikeContentType\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.987623589Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentSameKey","Output":"--- PASS: TestConcurrentSameKey (0.09s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:33.988466797Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestConcurrentSameKey","Elapsed":0.09}
+{"Time":"2026-10-27T00:17:33.988622547Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestParallelStateChanges"}
+{"Time":"2026-10-27T00:17:33.988677839Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestParallelStateChanges","Output":"=== RUN   TestParallelStateChanges\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.004017756Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Test":"TestRejectJSONLikeContentType","Output":"--- PASS: TestRejectJSONLikeContentType (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.004145547Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Test":"TestRejectJSONLikeContentType","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:34.004320547Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.033254381Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestParallelStateChanges","Output":"--- PASS: TestParallelStateChanges (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.033324506Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestParallelStateChanges","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:34.033428214Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestDeliveryRetryAndDeadLetter"}
+{"Time":"2026-10-27T00:17:34.033493089Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestDeliveryRetryAndDeadLetter","Output":"=== RUN   TestDeliveryRetryAndDeadLetter\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.091614881Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestDeliveryRetryAndDeadLetter","Output":"--- PASS: TestDeliveryRetryAndDeadLetter (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.091786006Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestDeliveryRetryAndDeadLetter","Elapsed":0.06}
+{"Time":"2026-10-27T00:17:34.091930006Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestRetryBackoff"}
+{"Time":"2026-10-27T00:17:34.092025339Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestRetryBackoff","Output":"=== RUN   TestRetryBackoff\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.144690089Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestRetryBackoff","Output":"--- PASS: TestRetryBackoff (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.144896672Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestRetryBackoff","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:34.145013381Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestParallelWorkersDeliverOnce"}
+{"Time":"2026-10-27T00:17:34.145076881Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestParallelWorkersDeliverOnce","Output":"=== RUN   TestParallelWorkersDeliverOnce\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.222382131Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestParallelWorkersDeliverOnce","Output":"--- PASS: TestParallelWorkersDeliverOnce (0.08s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.222551381Z","Action":"output","Package":"example.com/stockflow/internal/domain","Output":"ok  \texample.com/stockflow/internal/domain\t1.011s\n"}
+{"Time":"2026-10-27T00:17:34.222663298Z","Action":"pass","Package":"example.com/stockflow/internal/domain","Elapsed":1.011}
+{"Time":"2026-10-27T00:17:34.222557089Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestParallelWorkersDeliverOnce","Elapsed":0.08}
+{"Time":"2026-10-27T00:17:34.223291839Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestCancelledContext"}
+{"Time":"2026-10-27T00:17:34.223374173Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCancelledContext","Output":"=== RUN   TestCancelledContext\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.234278506Z","Action":"output","Package":"example.com/stockflow/cmd/stockflow","Output":"ok  \texample.com/stockflow/cmd/stockflow\t1.022s\n"}
+{"Time":"2026-10-27T00:17:34.234356714Z","Action":"pass","Package":"example.com/stockflow/cmd/stockflow","Elapsed":1.023}
+{"Time":"2026-10-27T00:17:34.266108006Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestCancelledContext","Output":"--- PASS: TestCancelledContext (0.04s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.266199589Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestCancelledContext","Elapsed":0.04}
+{"Time":"2026-10-27T00:17:34.266289298Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestLockWaitRespectsDeadline"}
+{"Time":"2026-10-27T00:17:34.266425548Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestLockWaitRespectsDeadline","Output":"=== RUN   TestLockWaitRespectsDeadline\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.351844423Z","Action":"output","Package":"example.com/stockflow/internal/worker","Output":"ok  \texample.com/stockflow/internal/worker\t1.097s\n"}
+{"Time":"2026-10-27T00:17:34.351937923Z","Action":"pass","Package":"example.com/stockflow/internal/worker","Elapsed":1.097}
+{"Time":"2026-10-27T00:17:34.428427714Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestLockWaitRespectsDeadline","Output":"--- PASS: TestLockWaitRespectsDeadline (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.428618964Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestLockWaitRespectsDeadline","Elapsed":0.16}
+{"Time":"2026-10-27T00:17:34.428785964Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestSeedAndMigrationsRepeat"}
+{"Time":"2026-10-27T00:17:34.428928506Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestSeedAndMigrationsRepeat","Output":"=== RUN   TestSeedAndMigrationsRepeat\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.477954631Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestSeedAndMigrationsRepeat","Output":"--- PASS: TestSeedAndMigrationsRepeat (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.478742173Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestSeedAndMigrationsRepeat","Elapsed":0.05}
+{"Time":"2026-10-27T00:17:34.478900089Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestDatabaseConstraints"}
+{"Time":"2026-10-27T00:17:34.478958339Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestDatabaseConstraints","Output":"=== RUN   TestDatabaseConstraints\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.521731214Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestDatabaseConstraints","Output":"--- PASS: TestDatabaseConstraints (0.04s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:34.521856006Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestDatabaseConstraints","Elapsed":0.04}
+{"Time":"2026-10-27T00:17:34.521961589Z","Action":"run","Package":"example.com/stockflow/internal/store","Test":"TestExpiryIsRecheckedAfterStockLockWait"}
+{"Time":"2026-10-27T00:17:34.522072756Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryIsRecheckedAfterStockLockWait","Output":"=== RUN   TestExpiryIsRecheckedAfterStockLockWait\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:35.000479631Z","Action":"output","Package":"example.com/stockflow/internal/store","Test":"TestExpiryIsRecheckedAfterStockLockWait","Output":"--- PASS: TestExpiryIsRecheckedAfterStockLockWait (0.48s)\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:35.000663673Z","Action":"pass","Package":"example.com/stockflow/internal/store","Test":"TestExpiryIsRecheckedAfterStockLockWait","Elapsed":0.48}
+{"Time":"2026-10-27T00:17:35.000766048Z","Action":"output","Package":"example.com/stockflow/internal/store","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-27T00:17:35.00864709Z","Action":"output","Package":"example.com/stockflow/internal/httpapi","Output":"ok  \texample.com/stockflow/internal/httpapi\t1.754s\n"}
+{"Time":"2026-10-27T00:17:35.008755506Z","Action":"pass","Package":"example.com/stockflow/internal/httpapi","Elapsed":1.754}
+{"Time":"2026-10-27T00:17:36.016422257Z","Action":"output","Package":"example.com/stockflow/internal/store","Output":"ok  \texample.com/stockflow/internal/store\t2.761s\n"}
+{"Time":"2026-10-27T00:17:36.016706465Z","Action":"pass","Package":"example.com/stockflow/internal/store","Elapsed":2.762}

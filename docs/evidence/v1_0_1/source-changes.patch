@@ -1,0 +1,158 @@
+--- v1.0.0/cmd/stockflow/main.go
++++ v1.0.1/cmd/stockflow/main.go
+@@ -7,6 +7,7 @@
+ 	"example.com/stockflow/internal/store"
+ 	"example.com/stockflow/internal/worker"
+ 	"log/slog"
++	"net"
+ 	"net/http"
+ 	"os"
+ 	"os/signal"
+@@ -17,13 +18,7 @@
+ 
+ func main() {
+ 	if len(os.Args) > 1 && os.Args[1] == "health" {
+-		client := http.Client{Timeout: 2 * time.Second}
+-		response, err := client.Get("http://127.0.0.1:8080/readyz")
+-		if err != nil {
+-			os.Exit(1)
+-		}
+-		defer response.Body.Close()
+-		if response.StatusCode != 200 {
++		if err := checkHealth(os.Getenv("LISTEN_ADDR")); err != nil {
+ 			os.Exit(1)
+ 		}
+ 		return
+@@ -101,3 +96,40 @@
+ 	logger.Info("shutdown_complete")
+ 	return err
+ }
++
++// Connect to loopback when the server listens on an unspecified interface.
++func healthURL(address string) (string, error) {
++	if address == "" {
++		address = "127.0.0.1:8080"
++	}
++	host, port, err := net.SplitHostPort(address)
++	if err != nil {
++		return "", err
++	}
++	if port == "" {
++		return "", errors.New("missing listen port")
++	}
++	if host == "" || host == "0.0.0.0" {
++		host = "127.0.0.1"
++	}
++	if host == "::" {
++		host = "::1"
++	}
++	return "http://" + net.JoinHostPort(host, port) + "/readyz", nil
++}
++func checkHealth(address string) error {
++	endpoint, err := healthURL(address)
++	if err != nil {
++		return err
++	}
++	client := http.Client{Timeout: 2 * time.Second}
++	response, err := client.Get(endpoint)
++	if err != nil {
++		return err
++	}
++	defer response.Body.Close()
++	if response.StatusCode != http.StatusOK {
++		return errors.New("server is not ready")
++	}
++	return nil
++}
+--- v1.0.0/cmd/stockflow/main_test.go
++++ v1.0.1/cmd/stockflow/main_test.go
+@@ -0,0 +1,45 @@
++package main
++
++import (
++	"net/http"
++	"net/http/httptest"
++	"strings"
++	"testing"
++)
++
++func TestHealthURL(t *testing.T) {
++	cases := map[string]string{"": "http://127.0.0.1:8080/readyz", ":9090": "http://127.0.0.1:9090/readyz", "0.0.0.0:9090": "http://127.0.0.1:9090/readyz", "127.0.0.1:9091": "http://127.0.0.1:9091/readyz", "[::]:9090": "http://[::1]:9090/readyz", "[::1]:9091": "http://[::1]:9091/readyz"}
++	for address, want := range cases {
++		t.Run(address, func(t *testing.T) {
++			got, err := healthURL(address)
++			if err != nil || got != want {
++				t.Fatalf("%q %v", got, err)
++			}
++		})
++	}
++	for _, address := range []string{"invalid", "localhost:"} {
++		if _, err := healthURL(address); err == nil {
++			t.Fatalf("accepted %q", address)
++		}
++	}
++}
++func TestCheckHealth(t *testing.T) {
++	for _, status := range []int{200, 503} {
++		t.Run(http.StatusText(status), func(t *testing.T) {
++			server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
++				if r.URL.Path != "/readyz" {
++					t.Errorf("unexpected path %s", r.URL.Path)
++				}
++				w.WriteHeader(status)
++			}))
++			defer server.Close()
++			err := checkHealth(strings.TrimPrefix(server.URL, "http://"))
++			if (err == nil) != (status == 200) {
++				t.Fatalf("status %d: %v", status, err)
++			}
++		})
++	}
++	if err := checkHealth("invalid"); err == nil {
++		t.Fatal("invalid address accepted")
++	}
++}
+--- v1.0.0/internal/store/store.go
++++ v1.0.1/internal/store/store.go
+@@ -253,6 +253,16 @@
+ 	if err != nil {
+ 		return zero, err
+ 	}
++	if status == "expired" {
++		r, e := getReservation(ctx, tx, a.Tenant, id)
++		if e != nil {
++			return zero, e
++		}
++		if e = tx.Commit(ctx); e != nil {
++			return zero, e
++		}
++		return r, domain.ErrExpired
++	}
+ 	if status == target {
+ 		r, e := getReservation(ctx, tx, a.Tenant, id)
+ 		if e != nil {
+--- v1.0.0/internal/store/store_test.go
++++ v1.0.1/internal/store/store_test.go
+@@ -143,6 +143,22 @@
+ 	if domain.AsFault(err).Code != "expired" {
+ 		t.Fatal(err)
+ 	}
++	var beforeEvents, afterEvents int
++	if err = db.Pool.QueryRow(ctx, `SELECT count(*) FROM outbox WHERE reservation_id=$1`, r.ID).Scan(&beforeEvents); err != nil {
++		t.Fatal(err)
++	}
++	for _, target := range []string{"confirmed", "cancelled"} {
++		again, e := db.Transition(ctx, a, r.ID, target, 1)
++		if e == nil || domain.AsFault(e).Code != "expired" || again.Status != "expired" || again.Version != 2 {
++			t.Fatalf("expiry replay: %+v %v", again, e)
++		}
++	}
++	if err = db.Pool.QueryRow(ctx, `SELECT count(*) FROM outbox WHERE reservation_id=$1`, r.ID).Scan(&afterEvents); err != nil {
++		t.Fatal(err)
++	}
++	if beforeEvents != afterEvents {
++		t.Fatal("expiry replay wrote events")
++	}
+ 	got, _ := db.Get(ctx, a.Tenant, r.ID)
+ 	stock, _ := db.Stocks(ctx, a.Tenant)
+ 	if got.Status != "expired" || stock[0].OnHand != 120 || stock[0].Reserved != 0 {

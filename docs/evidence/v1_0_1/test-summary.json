@@ -1,0 +1,19 @@
+{
+  "version": "1.0.1",
+  "date": "2026-10-27",
+  "go_top_level": 42,
+  "go_with_subtests": 66,
+  "fail": 0,
+  "test_skip": 0,
+  "coverage": "71.7%",
+  "frontend_pass": 3,
+  "exit_codes": {
+    "go_checks": 0,
+    "frontend_checks": 0,
+    "govulncheck": 0,
+    "docker_build": 0,
+    "health_9090": 0
+  },
+  "focused_regression_count": 5,
+  "toolchain": "go1.27.3 linux/arm64"
+}

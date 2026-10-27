@@ -1,0 +1,5 @@
+{"time":"2026-10-27T00:17:55.803772335Z","level":"INFO","msg":"server_started","address":"0.0.0.0:9090","demo":true}
+{"time":"2026-10-27T00:17:55.846991835Z","level":"INFO","msg":"http_request","request_id":"7bd151a0e2df15d74ab675ff227696c0","method":"GET","route":"/readyz","status":200,"duration_ms":0}
+{"time":"2026-10-27T00:18:10.824179217Z","level":"INFO","msg":"http_request","request_id":"eda8217580e893d123656329633638f3","method":"GET","route":"/readyz","status":200,"duration_ms":0}
+{"time":"2026-10-27T00:18:10.827058634Z","level":"INFO","msg":"http_request","request_id":"972f611cec48dc1a007865336d321811","method":"GET","route":"/openapi.json","status":200,"duration_ms":0}
+{"time":"2026-10-27T00:18:10.950091884Z","level":"INFO","msg":"shutdown_complete"}
