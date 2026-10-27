@@ -1,0 +1,19 @@
+{
+  "go_top_level": 42,
+  "go_with_subtests": 66,
+  "failed": 0,
+  "skipped_tests": 0,
+  "exit_codes": {
+    "go": 0,
+    "frontend": 0,
+    "govulncheck": 0
+  },
+  "coverage": "72.0%",
+  "focused_passes": {
+    "TestHealthURL": 5,
+    "TestCheckHealth": 5,
+    "TestExpiryOnCommand": 5,
+    "TestExpiryIsRecheckedAfterStockLockWait": 5,
+    "TestRejectJSONLikeContentType": 5
+  }
+}
