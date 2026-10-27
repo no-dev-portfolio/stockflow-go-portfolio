@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS schema_migrations(version integer PRIMARY KEY, applied_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE tenants(id text PRIMARY KEY,name text NOT NULL);
+CREATE TABLE stock(tenant_id text REFERENCES tenants(id),sku text,name text NOT NULL,category text NOT NULL,on_hand integer NOT NULL CHECK(on_hand>=0),reserved integer NOT NULL DEFAULT 0 CHECK(reserved>=0 AND reserved<=on_hand),threshold integer NOT NULL DEFAULT 10 CHECK(threshold>=0),PRIMARY KEY(tenant_id,sku));
+CREATE TABLE reservations(id text PRIMARY KEY,tenant_id text NOT NULL REFERENCES tenants(id),reference text NOT NULL,status text NOT NULL CHECK(status IN('active','confirmed','cancelled','expired')),expires_at timestamptz NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),version integer NOT NULL DEFAULT 1,UNIQUE(tenant_id,id));
+CREATE INDEX reservations_tenant_created ON reservations(tenant_id,created_at DESC,id);
+CREATE INDEX reservations_expiry ON reservations(expires_at) WHERE status='active';
+CREATE TABLE reservation_items(tenant_id text NOT NULL,reservation_id text NOT NULL,sku text NOT NULL,quantity integer NOT NULL CHECK(quantity>0),PRIMARY KEY(reservation_id,sku),FOREIGN KEY(tenant_id,reservation_id) REFERENCES reservations(tenant_id,id),FOREIGN KEY(tenant_id,sku) REFERENCES stock(tenant_id,sku));
+CREATE TABLE idempotency(tenant_id text NOT NULL REFERENCES tenants(id),key text NOT NULL,request_hash text NOT NULL,reservation_id text NOT NULL REFERENCES reservations(id),created_at timestamptz NOT NULL DEFAULT now(),PRIMARY KEY(tenant_id,key));
+CREATE TABLE outbox(id bigserial PRIMARY KEY,tenant_id text NOT NULL,reservation_id text NOT NULL,type text NOT NULL,status text NOT NULL DEFAULT 'pending' CHECK(status IN('pending','delivered','failed')),attempts integer NOT NULL DEFAULT 0 CHECK(attempts>=0),last_error text NOT NULL DEFAULT '',created_at timestamptz NOT NULL DEFAULT now(),next_attempt timestamptz NOT NULL DEFAULT now(),FOREIGN KEY(tenant_id,reservation_id) REFERENCES reservations(tenant_id,id));
+CREATE INDEX outbox_pending ON outbox(next_attempt,id) WHERE status='pending';
+CREATE TABLE delivery_receipts(event_id bigint PRIMARY KEY REFERENCES outbox(id),delivered_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE audit(id bigserial PRIMARY KEY,tenant_id text NOT NULL,reservation_id text NOT NULL,action text NOT NULL,actor text NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),FOREIGN KEY(tenant_id,reservation_id) REFERENCES reservations(tenant_id,id));
+CREATE INDEX audit_tenant ON audit(tenant_id,id DESC);
+INSERT INTO schema_migrations(version)VALUES(1);
