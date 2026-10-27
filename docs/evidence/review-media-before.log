@@ -1,0 +1,6 @@
+=== RUN   TestRejectJSONLikeContentType
+    api_test.go:209: accepted unsupported media type application/jsonp: 201
+--- FAIL: TestRejectJSONLikeContentType (0.02s)
+FAIL
+FAIL	example.com/stockflow/internal/httpapi	0.028s
+FAIL

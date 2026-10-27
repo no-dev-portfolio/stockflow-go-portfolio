@@ -1,0 +1,50 @@
+all modules verified
+	example.com/stockflow/cmd/stockflow		coverage: 0.0% of statements
+ok  	example.com/stockflow/internal/domain	1.011s	coverage: 87.9% of statements
+ok  	example.com/stockflow/internal/httpapi	1.737s	coverage: 87.0% of statements
+ok  	example.com/stockflow/internal/store	2.806s	coverage: 77.7% of statements
+	example.com/stockflow/internal/testutil		coverage: 0.0% of statements
+ok  	example.com/stockflow/internal/worker	1.108s	coverage: 86.4% of statements
+?   	example.com/stockflow/migrations	[no test files]
+?   	example.com/stockflow/web	[no test files]
+example.com/stockflow/cmd/stockflow/main.go:18:		main		0.0%
+example.com/stockflow/cmd/stockflow/main.go:38:		run		0.0%
+example.com/stockflow/internal/domain/model.go:21:	Error		0.0%
+example.com/stockflow/internal/domain/model.go:31:	Invalid		100.0%
+example.com/stockflow/internal/domain/model.go:32:	AsFault		75.0%
+example.com/stockflow/internal/domain/model.go:43:	ID		75.0%
+example.com/stockflow/internal/domain/model.go:57:	CanWrite	100.0%
+example.com/stockflow/internal/domain/model.go:69:	Normalize	100.0%
+example.com/stockflow/internal/domain/model.go:143:	CheckVersion	66.7%
+example.com/stockflow/internal/httpapi/api.go:31:	DemoCredentials	100.0%
+example.com/stockflow/internal/httpapi/api.go:48:	Handler		84.0%
+example.com/stockflow/internal/httpapi/api.go:208:	actor		100.0%
+example.com/stockflow/internal/httpapi/api.go:209:	auth		100.0%
+example.com/stockflow/internal/httpapi/api.go:229:	forbidden	100.0%
+example.com/stockflow/internal/httpapi/api.go:232:	respond		100.0%
+example.com/stockflow/internal/httpapi/api.go:239:	fail		66.7%
+example.com/stockflow/internal/httpapi/api.go:253:	decode		100.0%
+example.com/stockflow/internal/httpapi/api.go:270:	pagination	92.3%
+example.com/stockflow/internal/store/read.go:8:		Stocks		81.8%
+example.com/stockflow/internal/store/read.go:24:	Reservations	78.9%
+example.com/stockflow/internal/store/read.go:76:	Events		81.8%
+example.com/stockflow/internal/store/read.go:92:	Audits		84.6%
+example.com/stockflow/internal/store/read.go:111:	Summary		100.0%
+example.com/stockflow/internal/store/store.go:19:	Open		71.4%
+example.com/stockflow/internal/store/store.go:38:	Migrate		68.2%
+example.com/stockflow/internal/store/store.go:70:	Seed		76.9%
+example.com/stockflow/internal/store/store.go:107:	writeEvent	80.0%
+example.com/stockflow/internal/store/store.go:115:	getReservation	82.4%
+example.com/stockflow/internal/store/store.go:142:	Get		100.0%
+example.com/stockflow/internal/store/store.go:145:	Create		78.7%
+example.com/stockflow/internal/store/store.go:230:	Transition	75.0%
+example.com/stockflow/internal/store/store.go:310:	releaseStock	73.9%
+example.com/stockflow/internal/store/store.go:343:	ExpireOne	70.6%
+example.com/stockflow/internal/store/store.go:370:	DeliverOne	87.0%
+example.com/stockflow/internal/store/store.go:403:	Retry		73.3%
+example.com/stockflow/internal/store/store.go:428:	rollback	100.0%
+example.com/stockflow/internal/testutil/db.go:12:	DB		0.0%
+example.com/stockflow/internal/testutil/db.go:51:	Manager		0.0%
+example.com/stockflow/internal/testutil/db.go:54:	Request		0.0%
+example.com/stockflow/internal/worker/worker.go:19:	Run		86.4%
+total:							(statements)	70.4%

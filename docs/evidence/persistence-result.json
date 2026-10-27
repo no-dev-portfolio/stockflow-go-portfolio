@@ -1,0 +1,13 @@
+{
+  "persisted_reservation": "d277fb8640822add547c23788a690b1e",
+  "summary_after_recreate": {
+    "products": 3,
+    "available": 169,
+    "active": 2,
+    "confirmed": 1,
+    "pending": 0,
+    "failed": 0,
+    "delivered": 4
+  },
+  "result": "PASS"
+}

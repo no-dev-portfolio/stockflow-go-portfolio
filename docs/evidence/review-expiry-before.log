@@ -1,0 +1,6 @@
+=== RUN   TestExpiryIsRecheckedAfterStockLockWait
+    store_test.go:447: expired reservation confirmed after lock wait: <nil>
+--- FAIL: TestExpiryIsRecheckedAfterStockLockWait (0.48s)
+FAIL
+FAIL	example.com/stockflow/internal/store	0.488s
+FAIL

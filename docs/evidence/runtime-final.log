@@ -1,0 +1,5 @@
+{"time":"2026-10-27T00:00:59.805553629Z","level":"INFO","msg":"server_started","address":"0.0.0.0:8080","demo":true}
+{"time":"2026-10-27T00:01:09.829625842Z","level":"INFO","msg":"http_request","request_id":"03754dd6fb2a3fe7d7752b045f78cd96","method":"GET","route":"/readyz","status":200,"duration_ms":0}
+{"time":"2026-10-27T00:01:10.459124551Z","level":"INFO","msg":"http_request","request_id":"3e646863b9de70b23c3ba2d5bd102579","method":"GET","route":"/api/v1/reservations/:id","status":200,"duration_ms":2}
+{"time":"2026-10-27T00:01:10.463847467Z","level":"INFO","msg":"http_request","request_id":"9dc38da8661df88eefb8c554b59dc1e6","method":"GET","route":"/api/v1/summary","status":200,"duration_ms":2}
+{"time":"2026-10-27T00:01:10.596431259Z","level":"INFO","msg":"shutdown_complete"}

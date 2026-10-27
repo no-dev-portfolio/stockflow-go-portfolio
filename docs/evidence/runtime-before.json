@@ -1,0 +1,34 @@
+{
+  "/healthz": {
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "/readyz": {
+    "status": 200,
+    "body": {
+      "status": "ready"
+    }
+  },
+  "/": {
+    "status": 200,
+    "body": "valid response"
+  },
+  "/openapi.json": {
+    "status": 200,
+    "body": "valid response"
+  },
+  "/api/v1/summary": {
+    "status": 200,
+    "body": {
+      "products": 3,
+      "available": 170,
+      "active": 1,
+      "confirmed": 1,
+      "pending": 0,
+      "failed": 0,
+      "delivered": 3
+    }
+  }
+}
